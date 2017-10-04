@@ -12,12 +12,12 @@ class App extends Component {
   render() {
     return (
       <Scene>
-        <a-assets>
+        {/* <a-assets>
           <img id="skyTexture" src="https://ucarecdn.com/19a73c27-dc44-4e15-9d49-e93fd70d8014/"/>
-        </a-assets>
+        </a-assets> */}
 
         {/* Background Image */}
-        <Entity primitive="a-sky" height="2048" radius="30" src="#skyTexture"  width="2048"/>
+        <Entity primitive="a-sky" src="https://ucarecdn.com/19a73c27-dc44-4e15-9d49-e93fd70d8014/"  />
 
         {/* Snow */}
         {/* <Entity particle-system={{preset: 'snow', particleCount: 8000}}/> */}
