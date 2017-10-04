@@ -20,8 +20,8 @@ class App extends Component {
         <Entity primitive="a-sky" src="https://ucarecdn.com/19a73c27-dc44-4e15-9d49-e93fd70d8014/"  />
 
         {/* Snow */}
-        {/* <Entity particle-system={{preset: 'snow', particleCount: 8000}}/> */}
-
+        <Entity particle-system={{preset: 'snow', particleCount: 8000}}/>
+     
         {/* Text*/}
         {/* <Entity text={{value: 'Welcome!', align: 'center'}} position={{x: 0, y: 2, z: -1}}/> */}
 
@@ -34,8 +34,8 @@ class App extends Component {
 
         {/* Camera */}
         <Entity primitive="a-camera">
-          <Entity primitive="a-cursor" animation__click={{property: 'scale', startEvents: 'click', from: '0.1 0.1 0.1', to: '1 1 1', dur: 150}}/>
-        </Entity>
+        <Entity primitive="a-cursor" animation__click={{property: 'scale', startEvents: 'click', from: '0.1 0.1 0.1', to: '1 1 1', dur: 150}}/>
+      </Entity>
 
       </Scene>
     );

@@ -84,8 +84,34 @@ We now need to add a background image to the sky. We will be using the following
 <Entity primitive="a-sky" src="https://ucarecdn.com/19a73c27-dc44-4e15-9d49-e93fd70d8014/" />
 ```
 
+Use an equirectangular image as a background for the best result. 
 
+If you want to do a plan color instead of an image you can use `color="#444" ` instead of a `src=""`
 
+```
+<Entity primitive="a-sky" color="#444" />
+
+```
+
+## Adding Camera and Curser Primitives
+
+The camera primitive determines what the user sees. We can change the viewport by modifying the camera entity’s position and rotation.
+
+The cursor primitive is a reticle that allows for clicking and basic interactivity with a scene on devices that do not have a hand controller. The default appearance is a ring geometry. The cursor is usually placed as a child of the camera.
+
+```
+<Entity primitive="a-camera">
+    <Entity primitive="a-cursor" animation__click={{property: 'scale', startEvents: 'click', from: '0.1 0.1 0.1', to: '1 1 1', dur: 150}}/>
+</Entity>
+```
+
+## Adding Snow
+
+In order to add snow we will be using the `aframe-particle-system-component` dependency as this is not a built in A-Frame feature.
+
+Make another Entity tag and give 
+
+<Entity particle-system={{preset: 'snow', particleCount: 8000}}/>
 
 
 ## Resources: 
@@ -93,4 +119,8 @@ We now need to add a background image to the sky. We will be using the following
 - https://aframe.io/
 - https://cdn.aframe.io/
 - https://github.com/aframevr/awesome-aframe
+- https://aframe.io/docs/0.7.0/primitives/a-sky.html
+- https://aframe.io/docs/0.7.0/primitives/a-camera.html
+- https://aframe.io/docs/0.7.0/primitives/a-cursor.html
+- 
 
