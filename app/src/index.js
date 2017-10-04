@@ -8,5 +8,5 @@ import App from './App';
 
 
 
-ReactDOM.render(<App />, document.querySelector('#sceneContainer'));
+ReactDOM.render(<App />, document.getElementById('root'));
 
