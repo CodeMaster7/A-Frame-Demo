@@ -22,10 +22,6 @@ class App extends Component {
         <Entity primitive='a-cylinder' color="purple" position="12 1.5 -5" rotation="90 90 180"/>
 
 
-        <Entity primitive="a-camera">
-        <Entity primitive="a-cursor" animation__click={{property: 'scale', startEvents: 'click', from: '0.1 0.1 0.1', to: '1 1 1', dur: 150}}/>
-      </Entity>
-
       </Scene>
     );
   }

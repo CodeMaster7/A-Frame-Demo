@@ -33,9 +33,7 @@ Now import all of those dependancies into your app.js. We will need to import En
 
 ```
 import 'aframe';
-import 'aframe-animation-component';
 import 'aframe-particle-system-component';
-import 'babel-polyfill';
 import {Entity, Scene} from 'aframe-react';
 ```
 
@@ -43,8 +41,7 @@ import {Entity, Scene} from 'aframe-react';
 ## Step 4 
 
 Inside the return remove what create-react-app gave you and add just a Scene tag. 
-<Scene>
-</Scene>
+
 
 ```
 class App extends Component {
@@ -91,17 +88,6 @@ If you want to do a plan color instead of an image you can use `color="#444" ` i
 
 ```
 
-## Adding Camera and Curser Primitives
-
-The camera primitive determines what the user sees. We can change the viewport by modifying the camera entity’s position and rotation.
-
-The cursor primitive is a reticle that allows for clicking and basic interactivity with a scene on devices that do not have a hand controller. The default appearance is a ring geometry. The cursor is usually placed as a child of the camera.
-
-```
-<Entity primitive="a-camera">
-    <Entity primitive="a-cursor" animation__click={{property: 'scale', startEvents: 'click', from: '0.1 0.1 0.1', to: '1 1 1', dur: 150}}/>
-</Entity>
-```
 
 ## Adding Shapes 
 
